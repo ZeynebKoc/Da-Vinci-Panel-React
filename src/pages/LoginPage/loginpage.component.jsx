@@ -1,4 +1,5 @@
 import React from "react";
+import "./loginpage.styles.css";
 
 import srcbgLoginPage from "../../assets/images-lg-page/bg-loginPage.png";
 import srcIconPerson from "../../assets/images-lg-page/icon-person.png";
@@ -6,13 +7,13 @@ import srcIconEmail from "../../assets/images-lg-page/icon-email.png";
 import srcIconPassword from "../../assets/images-lg-page/icon-password.png";
 
 class LoginPage extends React.Component {
-
     render() {
         return (
             <React.Fragment>
                 <div
                     class="srcbgLoginPage"
                     src={srcbgLoginPage}
+                    style={{ backgroundImage: "url(" + srcbgLoginPage + ")" }}
                 >
                     <div class="login-bg">
                         <div class="login-content">
