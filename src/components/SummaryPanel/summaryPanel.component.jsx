@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../components/Button/button.component";
+import "./summaryPanel.styles.css";
 import iconArrow from "../../assets/images-homepage/iconArrow.svg";
 
 class SummaryPanel extends React.Component {
@@ -70,20 +71,21 @@ class SummaryPanel extends React.Component {
 
                         <div class="horizontal">
                             <h3>Who's at cafe?</h3>
-                            <label>
-                                <select class="personnel">
-                                    <option value="" />
-                                    <option value="Esra">Esra</option>
-                                    <option value="Zeyneb">Zeyneb</option>
-                                </select>
-                                <img
-                                    class="arrow"
-                                    src={iconArrow}
-                                    alt="option-arrow"
-                                />
-                            </label>
+
+                            <img
+                                class="arrow"
+                                src={iconArrow}
+                                alt="option-arrow"
+                            />
                         </div>
                         <div class="line-sp" />
+                        <label>
+                            <select class="personnel">
+                                <option value="" />
+                                <option value="Esra">Esra</option>
+                                <option value="Zeyneb">Zeyneb</option>
+                            </select>
+                        </label>
                         <div class="button">
                             <Button
                                 size="button-size-medium"

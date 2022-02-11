@@ -1,8 +1,8 @@
 import React from "react";
 import "./homepage.styles.css";
 import { Link } from "react-router-dom";
-
 import srcbgHomePage from "../../assets/images-homepage/bg-homePage.png";
+import SummaryPanel from "../../components/SummaryPanel/summaryPanel.component";
 
 class HomePage extends React.Component {
     render() {
@@ -22,6 +22,7 @@ class HomePage extends React.Component {
                             Log Out
                         </Link>
                     </div>
+                    <SummaryPanel />
                 </div>
             </React.Fragment>
         );
