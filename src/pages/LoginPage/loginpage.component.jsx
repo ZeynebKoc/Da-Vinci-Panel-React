@@ -9,6 +9,17 @@ import srcIconEmail from "../../assets/images-lg-page/icon-email.png";
 import srcIconPassword from "../../assets/images-lg-page/icon-password.png";
 
 class LoginPage extends React.Component {
+    state = {
+        username: "",
+        password: "",
+    };
+
+    togglePassword = () => {
+        let showPassword = document.getElementById("password");
+        showPassword.type =
+            showPassword.type == "password" ? "text" : "password";
+    };
+
     render() {
         return (
             <React.Fragment>
@@ -39,6 +50,7 @@ class LoginPage extends React.Component {
                                     placeholder="Email ID"
                                     autocomplete="on"
                                     required
+                                    value={this.props.username}
                                 />
                             </div>
                             <div class="line" />
@@ -57,10 +69,14 @@ class LoginPage extends React.Component {
                                     minlength="4"
                                     maxlength="18"
                                     required
+                                    value={this.props.password}
                                 />
                                 <i
                                     id="eye-icon"
                                     class="circular eye link icon"
+                                    onClick={() => {
+                                        this.togglePassword();
+                                    }}
                                 />
                             </div>
                             <div class="line" />
