@@ -1,4 +1,5 @@
 import React from "react";
+import "./homepage.styles.css";
 import { Link } from "react-router-dom";
 
 import srcbgHomePage from "../../assets/images-homepage/bg-homePage.png";
