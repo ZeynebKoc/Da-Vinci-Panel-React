@@ -1,5 +1,7 @@
 import React from "react";
 import "./loginpage.styles.css";
+import Button from "../../components/Button/button.component";
+import { Link } from "react-router-dom";
 
 import srcbgLoginPage from "../../assets/images-lg-page/bg-loginPage.png";
 import srcIconPerson from "../../assets/images-lg-page/icon-person.png";
@@ -69,8 +71,12 @@ class LoginPage extends React.Component {
                                 </div>
                                 <p class="forgot-text">Forgot Password?</p>
                             </div>
-
-                            <button size="button-size-big">LOGIN</button>
+                            <Link to="/home">
+                                <Button
+                                    size="button-size-big"
+                                    buttonName=" LOGIN"
+                                />
+                            </Link>
                         </div>
                     </div>
                 </div>
