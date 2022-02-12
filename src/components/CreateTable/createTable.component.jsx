@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../../components/Button/button.component";
 import srcbgCreateTable from "../../assets/images-create-table/bg-create-table.png";
+import "./createTable.styles.css";
 
 class CreateTable extends React.Component {
     state = {};
@@ -15,9 +16,7 @@ class CreateTable extends React.Component {
                         }}
                     >
                         <div class="createTables-bg">
-                            <form
-                                class="createTables-content"
-                            >
+                            <form class="createTables-content">
                                 <div class="content-section">
                                     <div class="horizontal">
                                         <h3>Name</h3>
