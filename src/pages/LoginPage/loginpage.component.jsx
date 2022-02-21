@@ -24,21 +24,21 @@ class LoginPage extends React.Component {
         return (
             <React.Fragment>
                 <div
-                    class="srcbgLoginPage"
+                    className="srcbgLoginPage"
                     src={srcbgLoginPage}
                     style={{ backgroundImage: "url(" + srcbgLoginPage + ")" }}
                 >
-                    <div class="login-bg">
-                        <div class="login-content">
+                    <div className="login-bg">
+                        <div className="login-content">
                             <img
                                 src={srcIconPerson}
-                                class="icon-person"
+                                className="icon-person"
                                 alt="Person Icon"
                             />
-                            <div class="email">
+                            <div className="email">
                                 <img
                                     src={srcIconEmail}
-                                    class="icon-email"
+                                    className="icon-email"
                                     alt="Email Icon"
                                 />
                                 <input
@@ -53,11 +53,11 @@ class LoginPage extends React.Component {
                                     value={this.props.username}
                                 />
                             </div>
-                            <div class="line" />
-                            <div class="password">
+                            <div className="line" />
+                            <div className="password">
                                 <img
                                     src={srcIconPassword}
-                                    class="icon-password"
+                                    className="icon-password"
                                     alt="Password Icon"
                                 />
                                 <input
@@ -73,19 +73,19 @@ class LoginPage extends React.Component {
                                 />
                                 <i
                                     id="eye-icon"
-                                    class="circular eye link icon"
+                                    className="circular eye link icon"
                                     onClick={() => {
                                         this.togglePassword();
                                     }}
                                 />
                             </div>
-                            <div class="line" />
-                            <div class="remember-forgot">
-                                <div class="remember">
+                            <div className="line" />
+                            <div className="remember-forgot">
+                                <div className="remember">
                                     <input type="checkbox" />
-                                    <p class="rememberme-text">Remember me</p>
+                                    <p className="rememberme-text">Remember me</p>
                                 </div>
-                                <p class="forgot-text">Forgot Password?</p>
+                                <p className="forgot-text">Forgot Password?</p>
                             </div>
                             <Link to="/home">
                                 <Button

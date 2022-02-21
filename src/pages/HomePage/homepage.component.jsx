@@ -9,7 +9,7 @@ class HomePage extends React.Component {
         return (
             <React.Fragment>
                 <div
-                    class="srcbgHomePage"
+                    className="srcbgHomePage"
                     style={{
                         backgroundImage: "url(" + srcbgHomePage + ")",
                     }}

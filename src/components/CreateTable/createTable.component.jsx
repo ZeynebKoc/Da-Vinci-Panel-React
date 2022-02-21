@@ -8,17 +8,19 @@ class CreateTable extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div class="bg-alpha">
+                <div className="bg-alpha">
                     <div
-                        class="srcbgCreateTable"
+                        className="srcbgCreateTable"
                         style={{
                             backgroundImage: "url(" + srcbgCreateTable + " )",
                         }}
                     >
-                        <div class="createTables-bg">
-                            <form class="createTables-content">
-                                <div class="content-section">
-                                    <div class="horizontal">
+                        <div className="createTables-bg">
+                            <form
+                                className="createTables-content"
+                            >
+                                <div className="content-section">
+                                    <div className="horizontal">
                                         <h3>Name</h3>
                                         <input
                                             name="name"
@@ -28,12 +30,12 @@ class CreateTable extends React.Component {
                                             required
                                         />
                                     </div>
-                                    <div class="line-ct" />
+                                    <div className="line-ct" />
                                     <h4>Table name is required</h4>
                                 </div>
 
-                                <div class="content-section">
-                                    <div class="horizontal">
+                                <div className="content-section">
+                                    <div className="horizontal">
                                         <h3>Player Count</h3>
                                         <input
                                             name="name"
@@ -43,36 +45,36 @@ class CreateTable extends React.Component {
                                             placeholder="0"
                                         />
                                     </div>
-                                    <div class="line-ct" />
+                                    <div className="line-ct" />
                                 </div>
 
-                                <div class="content-section">
-                                    <div class="horizontal">
-                                        <div class="vertical">
-                                            <div class="horizontal">
+                                <div className="content-section">
+                                    <div className="horizontal">
+                                        <div className="vertical">
+                                            <div className="horizontal">
                                                 <h3>Start</h3>
                                                 <input
                                                     name="name"
                                                     type="time"
                                                 />
                                             </div>
-                                            <div class="line-ct" />
+                                            <div className="line-ct" />
                                         </div>
 
-                                        <div class="vertical">
-                                            <div class="horizontal">
+                                        <div className="vertical">
+                                            <div className="horizontal">
                                                 <h3>Finish</h3>
                                                 <input
                                                     name="name"
                                                     type="time"
                                                 />
                                             </div>
-                                            <div class="line-ct" />
+                                            <div className="line-ct" />
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="buttons">
+                                <div className="buttons">
                                     <Button
                                         size="default"
                                         buttonName="CANCEL"
