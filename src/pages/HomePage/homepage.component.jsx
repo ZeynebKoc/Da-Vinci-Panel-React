@@ -3,11 +3,26 @@ import "./homepage.styles.css";
 import { Link } from "react-router-dom";
 import srcbgHomePage from "../../assets/images-homepage/bg-homePage.png";
 import SummaryPanel from "../../components/SummaryPanel/summaryPanel.component";
+import CreateTable from "../../components/CreateTable/createTable.component";
 
 class HomePage extends React.Component {
+    state = { showCreateTablePopUp: false };
+
+    toggleCreateTablePopUp = () => {
+        this.setState({
+            showCreateTablePopUp: !this.state.showCreateTablePopUp,
+        });
+    };
+
     render() {
         return (
             <React.Fragment>
+                {this.state.showCreateTablePopUp ? (
+                    <CreateTable
+                        showCreateTablePopUp={this.state.showCreateTablePopUp}
+                        toggleCreateTablePopUp={this.toggleCreateTablePopUp}
+                    />
+                ) : null}
                 <div
                     className="srcbgHomePage"
                     style={{
@@ -22,7 +37,10 @@ class HomePage extends React.Component {
                             Log Out
                         </Link>
                     </div>
-                    <SummaryPanel />
+                    <SummaryPanel
+                        showCreateTablePopUp={this.state.showCreateTablePopUp}
+                        toggleCreateTablePopUp={this.toggleCreateTablePopUp}
+                    />
                 </div>
             </React.Fragment>
         );

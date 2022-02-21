@@ -78,6 +78,9 @@ class CreateTable extends React.Component {
                                     <Button
                                         size="default"
                                         buttonName="CANCEL"
+                                        onClick={() => {
+                                            this.props.toggleCreateTablePopUp();
+                                        }}
                                     />
                                     <Button
                                         size="default"

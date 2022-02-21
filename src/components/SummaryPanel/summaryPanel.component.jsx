@@ -89,6 +89,12 @@ class SummaryPanel extends React.Component {
                             <Button
                                 size="button-size-medium"
                                 buttonName="Add Table"
+                                onClick={() => {
+                                    this.props.toggleCreateTablePopUp();
+                                }}
+                                showCreateTablePopUp={
+                                    this.props.showCreateTablePopUp
+                                }
                             />
                         </div>
                     </div>
