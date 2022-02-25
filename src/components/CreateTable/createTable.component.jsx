@@ -19,7 +19,7 @@ class CreateTable extends React.Component {
                             <form
                                 className="createTables-content"
                             >
-                                <div className="content-section">
+                                <div className="content-section-ct">
                                     <div className="horizontal">
                                         <h3>Name</h3>
                                         <input
@@ -34,7 +34,7 @@ class CreateTable extends React.Component {
                                     <h4>Table name is required</h4>
                                 </div>
 
-                                <div className="content-section">
+                                <div className="content-section-ct">
                                     <div className="horizontal">
                                         <h3>Player Count</h3>
                                         <input
@@ -48,7 +48,7 @@ class CreateTable extends React.Component {
                                     <div className="line-ct" />
                                 </div>
 
-                                <div className="content-section">
+                                <div className="content-section-ct">
                                     <div className="horizontal">
                                         <div className="vertical">
                                             <div className="horizontal">

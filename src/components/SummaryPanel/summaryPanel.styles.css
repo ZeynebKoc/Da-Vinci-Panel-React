@@ -15,39 +15,38 @@
     flex-direction: column;
     padding: 5%;
 }
-.horizontal {
+.showTables-content .horizontal {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 }
-.vertical {
+.showTables-content .vertical {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 45%;
 }
-h3 {
+.showTables-content h3 {
     font-family: "Montserrat", sans-serif;
-    font-weight: 300;
+    font-weight: 450;
     font-size: 20px;
     line-height: 34px;
     color: #000000;
 }
-input[type="date"],
-input[type="number"],
-select {
+.showTables-content input[type="date"],
+.showTables-content input[type="number"],
+.showTables-content select {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 22px;
-    line-height: 34px;
-    color: #000000;
+    color: #da475d;
     background: none;
     border: none;
     outline: none;
     text-align: right;
     width: 35%;
 }
-select {
+.showTables-content select {
     position: relative;
     bottom: 50px;
     width: 100%;
