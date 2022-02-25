@@ -1,4 +1,5 @@
 import React from "react";
+import "./tablesView.styles.css";
 
 import srcbgTableView from "../../assets/images-table-view/bg-table-view.png";
 

@@ -43,7 +43,7 @@ class HomePage extends React.Component {
                         toggleCreateTablePopUp={this.toggleCreateTablePopUp}
                     />
                 </div>
-                <div class="table-view-place">
+                <div className="table-view-place">
                     <TablesView />
                 </div>
             </React.Fragment>
