@@ -1,0 +1,31 @@
+.srcbgHomePage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1440px;
+    background: #e5e5e5;
+    background-repeat: no-repeat;
+}
+/* navbar */
+.nav {
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    line-height: 44px;
+    margin-top: 40px;
+}
+.home,
+.logOut {
+    padding-left: 50px;
+    color: #ffffff;
+    cursor: pointer;
+}
+Link:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+/* show tables */
+.table-view-place {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1440px;
+}

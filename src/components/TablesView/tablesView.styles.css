@@ -1,0 +1,97 @@
+.srcbgTableView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    min-width: 29%;
+    margin-left: 3%;
+    margin-top: 50px;
+}
+@media only screen and (max-width: 1000px) {
+    .srcbgTableView {
+        width: 75%;
+        margin: 25px auto;
+    }
+}
+.srcbgTableView-bg {
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 30px;
+    box-shadow: 4px 4px 4px rgb(0 0 0 / 50%);
+    opacity: 0.9;
+    height: 80%;
+    width: 80%;
+}
+.srcbgTableView-content {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 80%;
+    width: 80%;
+}
+.content-section-tv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+}
+.srcbgTableView-content .horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.srcbgTableView-content .vertical {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.table-number {
+    display: flex;
+    justify-content: center;
+}
+.srcbgTableView-content h2 {
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #da475d;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+}
+.srcbgTableView-content h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 450;
+    font-size: 20px;
+    line-height: 17px;
+    color: #000000;
+}
+.srcbgTableView-content input[type="time"],
+.srcbgTableView-content input[type="text"],
+.srcbgTableView-content input[type="number"] {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #da475d;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    position: relative;
+    bottom: 10px;
+    text-align: left;
+}
+select {
+    position: relative;
+    bottom: 25px;
+    background: none;
+    border: none;
+    outline: none;
+}
+.line-tv {
+    height: 1px;
+    background: #000000;
+}

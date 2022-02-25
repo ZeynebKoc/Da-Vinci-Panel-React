@@ -1,0 +1,86 @@
+.bg-alpha {
+    z-index: 2;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgba(78, 77, 77, 0.67);
+}
+.srcbgCreateTable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85%;
+    width: 50%;
+    min-width: 480px;
+    margin: auto;
+}
+.createTables-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 40px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    height: 75%;
+    width: 85%;
+}
+.createTables-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 85%;
+    width: 85%;
+}
+.content-section-ct {
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+}
+.createTables-content .horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.createTables-content .vertical {
+    display: flex;
+    flex-direction: column;
+    width: 42%;
+}
+.createTables-content h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 450;
+    font-size: 20px;
+    line-height: 29px;
+    color: #000000;
+}
+.createTables-content h4 {
+    position: relative;
+    bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #da475d;
+}
+.createTables-content input[type="time"],
+.createTables-content input[type="number"],
+.createTables-content input[type="text"] {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #da475d;
+    background: none;
+    border: none;
+    outline: none;
+    text-align: right;
+    max-width: 60%;
+}
+.line-ct {
+    height: 1px;
+    background: rgba(5, 5, 5, 0.5);
+    padding: 1px;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
