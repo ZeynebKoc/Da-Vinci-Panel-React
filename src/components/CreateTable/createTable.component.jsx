@@ -5,6 +5,7 @@ import "./createTable.styles.css";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as getStartTimeAction from "../../redux/actions/getStartTimeAction";
+import * as getFinishTimeAction from "../../redux/actions/getFinishTimeAction";
 
 class CreateTable extends React.Component {
     render() {
@@ -73,6 +74,14 @@ class CreateTable extends React.Component {
                                                 <input
                                                     name="name"
                                                     type="time"
+                                                    onChange={(e) =>
+                                                        this.props.setFinishTime(
+                                                            e.target.value
+                                                        )
+                                                    }
+                                                    value={
+                                                        this.props.finishTime
+                                                    }
                                                 />
                                             </div>
                                             <div className="line-ct" />
@@ -105,6 +114,7 @@ class CreateTable extends React.Component {
 function mapStateToProps(state) {
     return {
         startTime: state.getStartTimeReducer,
+        finishTime: state.getFinishTimeReducer,
     };
 }
 
@@ -112,6 +122,10 @@ function mapDispatchToProps(dispatch) {
     return {
         getStartTime: bindActionCreators(
             getStartTimeAction.startTime,
+            dispatch
+        ),
+        setFinishTime: bindActionCreators(
+            getFinishTimeAction.finishTime,
             dispatch
         ),
     };
