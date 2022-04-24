@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import getDateTimeReducer from "./getDateTimeReducer";
+import getDateReducer from "./getDateReducer";
 
 const rootReducer = combineReducers({
-    getDateTimeReducer,
+    getDateReducer,
 });
 
 export default rootReducer;

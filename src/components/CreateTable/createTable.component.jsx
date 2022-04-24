@@ -16,9 +16,7 @@ class CreateTable extends React.Component {
                         }}
                     >
                         <div className="createTables-bg">
-                            <form
-                                className="createTables-content"
-                            >
+                            <form className="createTables-content">
                                 <div className="content-section-ct">
                                     <div className="horizontal">
                                         <h3>Name</h3>

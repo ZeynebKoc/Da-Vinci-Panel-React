@@ -2,6 +2,9 @@ import React from "react";
 import Button from "../../components/Button/button.component";
 import "./summaryPanel.styles.css";
 import iconArrow from "../../assets/images-homepage/iconArrow.svg";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as getDateAction from "../../redux/actions/getDateAction";
 
 class SummaryPanel extends React.Component {
     render() {
@@ -11,7 +14,15 @@ class SummaryPanel extends React.Component {
                     <div className="showTables-content">
                         <div className="horizontal">
                             <h3>Date</h3>
-                            <input name="date" type="date" size="200" />
+                            <input
+                                name="date"
+                                type="date"
+                                size="200"
+                                onChange={(event) =>
+                                    this.props.setDate(event.target.value)
+                                }
+                                value={this.props.currentDate}
+                            />
                         </div>
                         <div className="line-sp" />
 
@@ -104,4 +115,16 @@ class SummaryPanel extends React.Component {
     }
 }
 
-export default SummaryPanel;
+function mapStateToProps(state) {
+    return {
+        currentDate: state.getDateReducer,
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        setDate: bindActionCreators(getDateAction.getDate, dispatch),
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SummaryPanel);

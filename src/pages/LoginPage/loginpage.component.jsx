@@ -44,8 +44,8 @@ class LoginPage extends React.Component {
                                 <input
                                     type="email"
                                     name="e-mail"
-                                    minlength="10"
-                                    maxlength="24"
+                                    minLength="10"
+                                    maxLength="24"
                                     size="24"
                                     placeholder="Email ID"
                                     autocomplete="on"
@@ -65,9 +65,9 @@ class LoginPage extends React.Component {
                                     id="password"
                                     type="password"
                                     size="21"
-                                    placeholder="Password"
-                                    minlength="4"
-                                    maxlength="18"
+                                    placeHolder="Password"
+                                    minLength="4"
+                                    maxLength="18"
                                     required
                                     value={this.props.password}
                                 />
@@ -83,7 +83,9 @@ class LoginPage extends React.Component {
                             <div className="remember-forgot">
                                 <div className="remember">
                                     <input type="checkbox" />
-                                    <p className="rememberme-text">Remember me</p>
+                                    <p className="rememberme-text">
+                                        Remember me
+                                    </p>
                                 </div>
                                 <p className="forgot-text">Forgot Password?</p>
                             </div>
