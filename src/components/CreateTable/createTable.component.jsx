@@ -2,9 +2,11 @@ import React from "react";
 import Button from "../../components/Button/button.component";
 import srcbgCreateTable from "../../assets/images-create-table/bg-create-table.png";
 import "./createTable.styles.css";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as getStartTimeAction from "../../redux/actions/getStartTimeAction";
 
 class CreateTable extends React.Component {
-    state = {};
     render() {
         return (
             <React.Fragment>
@@ -54,6 +56,12 @@ class CreateTable extends React.Component {
                                                 <input
                                                     name="name"
                                                     type="time"
+                                                    onChange={(event) =>
+                                                        this.props.getStartTime(
+                                                            event.target.value
+                                                        )
+                                                    }
+                                                    value={this.props.startTime}
                                                 />
                                             </div>
                                             <div className="line-ct" />
@@ -94,4 +102,19 @@ class CreateTable extends React.Component {
     }
 }
 
-export default CreateTable;
+function mapStateToProps(state) {
+    return {
+        startTime: state.getStartTimeReducer,
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        getStartTime: bindActionCreators(
+            getStartTimeAction.startTime,
+            dispatch
+        ),
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CreateTable);
