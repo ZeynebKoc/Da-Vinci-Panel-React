@@ -5,6 +5,7 @@ import srcbgHomePage from "../../assets/images-homepage/bg-homePage.png";
 import SummaryPanel from "../../components/SummaryPanel/summaryPanel.component";
 import CreateTable from "../../components/CreateTable/createTable.component";
 import TableView from "../../components/TableView/tableView.component";
+import { connect } from "react-redux";
 
 class HomePage extends React.Component {
     state = { showCreateTablePopUp: false };
@@ -44,11 +45,21 @@ class HomePage extends React.Component {
                     />
                 </div>
                 <div className="table-view-place">
-                    <TableView />
+                    {this.props.tables.map((table) => (
+                        <TableView key={table.id} table={table} />
+                    ))}
                 </div>
             </React.Fragment>
         );
     }
 }
 
-export default HomePage;
+
+
+function mapStateToProps(state) {
+    return {
+        tables: state.tablesCountReducer,
+    };
+}
+
+export default connect(mapStateToProps)(HomePage);

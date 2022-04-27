@@ -4,6 +4,7 @@ import srcbgCreateTable from "../../assets/images-create-table/bg-create-table.p
 import "./createTable.styles.css";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import * as tablesCountAction from "../../redux/actions/tablesCountAction";
 
 class CreateTable extends React.Component {
     render() {
@@ -17,7 +18,15 @@ class CreateTable extends React.Component {
                         }}
                     >
                         <div className="createTables-bg">
-                            <form className="createTables-content">
+                            <form
+                                className="createTables-content"
+                                onSubmit={(event) => {
+                                    event.preventDefault();
+                                    this.props.addTable(this.props.table);
+
+                                    this.props.toggleCreateTablePopUp();
+                                }}
+                            >
                                 <div className="content-section-ct">
                                     <div className="horizontal">
                                         <h3>Name</h3>
@@ -27,6 +36,7 @@ class CreateTable extends React.Component {
                                             size="3"
                                             placeholder=" 00"
                                             required
+                                            value={this.props.table.tableName}
                                         />
                                     </div>
                                     <div className="line-ct" />
@@ -42,6 +52,7 @@ class CreateTable extends React.Component {
                                             required
                                             size="3"
                                             placeholder="0"
+                                            value={this.props.table.playerCount}
                                         />
                                     </div>
                                     <div className="line-ct" />
@@ -55,6 +66,10 @@ class CreateTable extends React.Component {
                                                 <input
                                                     name="name"
                                                     type="time"
+                                                    value={
+                                                        this.props.table
+                                                            .startTime
+                                                    }
                                                 />
                                             </div>
                                             <div className="line-ct" />
@@ -66,6 +81,10 @@ class CreateTable extends React.Component {
                                                 <input
                                                     name="name"
                                                     type="time"
+                                                    value={
+                                                        this.props.table
+                                                            .finishTime
+                                                    }
                                                 />
                                             </div>
                                             <div className="line-ct" />
@@ -103,7 +122,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        
+        addTable: bindActionCreators(tablesCountAction.addTable, dispatch),
     };
 }
 
