@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import srcbgHomePage from "../../assets/images-homepage/bg-homePage.png";
 import SummaryPanel from "../../components/SummaryPanel/summaryPanel.component";
 import CreateTable from "../../components/CreateTable/createTable.component";
-import TablesView from "../../components/TablesView/tablesView.component";
+import TableView from "../../components/TableView/tableView.component";
 
 class HomePage extends React.Component {
     state = { showCreateTablePopUp: false };
@@ -44,7 +44,7 @@ class HomePage extends React.Component {
                     />
                 </div>
                 <div className="table-view-place">
-                    <TablesView />
+                    <TableView />
                 </div>
             </React.Fragment>
         );

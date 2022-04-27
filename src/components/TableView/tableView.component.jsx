@@ -1,9 +1,9 @@
 import React from "react";
-import "./tablesView.styles.css";
+import "./tableView.styles.css";
 
 import srcbgTableView from "../../assets/images-table-view/bg-table-view.png";
 
-class TablesView extends React.Component {
+class TableView extends React.Component {
     render() {
         return (
             <React.Fragment>
@@ -77,4 +77,4 @@ class TablesView extends React.Component {
     }
 }
 
-export default TablesView;
+export default TableView;
