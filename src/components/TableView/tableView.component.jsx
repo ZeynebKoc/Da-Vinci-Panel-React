@@ -14,7 +14,7 @@ class TableView extends React.Component {
                     <div className="srcbgTableView-bg">
                         <form className="srcbgTableView-content">
                             <div className="table-number">
-                                <h2>MASA</h2>
+                                <h2>MASA {this.props.table.tableName}</h2>
                             </div>
                             <select className="personnel">
                                 <option />
@@ -29,6 +29,10 @@ class TableView extends React.Component {
                                                 name="name"
                                                 type="time"
                                                 required
+                                                readOnly
+                                                value={
+                                                    this.props.table.startTime
+                                                }
                                             />
                                             <div className="line-tv" />
                                         </div>
@@ -39,6 +43,10 @@ class TableView extends React.Component {
                                                 name="name"
                                                 type="time"
                                                 required
+                                                readOnly
+                                                value={
+                                                    this.props.table.finishTime
+                                                }
                                             />
                                             <div className="line-tv" />
                                         </div>
@@ -53,6 +61,8 @@ class TableView extends React.Component {
                                         autoComplete="on"
                                         required
                                         placeholder="Harry Potter: Hogwats Battle"
+                                        value={this.props.table.currentGame}
+                                        readOnly
                                     />
                                     <div className="line-tv" />
                                 </div>
@@ -65,6 +75,8 @@ class TableView extends React.Component {
                                         required
                                         size="3"
                                         placeholder="0"
+                                        value={this.props.table.playerCount}
+                                        readOnly
                                     />
                                     <div className="line-tv" />
                                 </div>
