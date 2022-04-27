@@ -5,6 +5,7 @@ import "./createTable.styles.css";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as tablesCountAction from "../../redux/actions/tablesCountAction";
+import * as createTableAction from "../../redux/actions/createTableAction";
 
 class CreateTable extends React.Component {
     render() {
@@ -36,6 +37,13 @@ class CreateTable extends React.Component {
                                             size="3"
                                             placeholder=" 00"
                                             required
+                                            onChange={(event) =>
+                                                this.props.setTable({
+                                                    ...this.props.table,
+                                                    tableName:
+                                                        event.target.value,
+                                                })
+                                            }
                                             value={this.props.table.tableName}
                                         />
                                     </div>
@@ -52,6 +60,13 @@ class CreateTable extends React.Component {
                                             required
                                             size="3"
                                             placeholder="0"
+                                            onChange={(event) =>
+                                                this.props.setTable({
+                                                    ...this.props.table,
+                                                    playerCount:
+                                                        event.target.value,
+                                                })
+                                            }
                                             value={this.props.table.playerCount}
                                         />
                                     </div>
@@ -66,6 +81,14 @@ class CreateTable extends React.Component {
                                                 <input
                                                     name="name"
                                                     type="time"
+                                                    onChange={(event) =>
+                                                        this.props.setTable({
+                                                            ...this.props.table,
+                                                            startTime:
+                                                                event.target
+                                                                    .value,
+                                                        })
+                                                    }
                                                     value={
                                                         this.props.table
                                                             .startTime
@@ -81,6 +104,14 @@ class CreateTable extends React.Component {
                                                 <input
                                                     name="name"
                                                     type="time"
+                                                    onChange={(event) =>
+                                                        this.props.setTable({
+                                                            ...this.props.table,
+                                                            finishTime:
+                                                                event.target
+                                                                    .value,
+                                                        })
+                                                    }
                                                     value={
                                                         this.props.table
                                                             .finishTime
@@ -116,13 +147,17 @@ class CreateTable extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        
+        table: state.createTableReducer,
     };
 }
 
 function mapDispatchToProps(dispatch) {
     return {
         addTable: bindActionCreators(tablesCountAction.addTable, dispatch),
+        setTable: bindActionCreators(
+            createTableAction.setCreateTable,
+            dispatch
+        ),
     };
 }
 
