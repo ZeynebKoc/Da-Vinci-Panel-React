@@ -18,8 +18,6 @@ export default function createTableReducer(
     action
 ) {
     switch (action.type) {
-        case actionTypes.GET_CREATE_TABLE:
-            return state;
         case actionTypes.SET_CREATE_TABLE:
             return action.payload;
         default:

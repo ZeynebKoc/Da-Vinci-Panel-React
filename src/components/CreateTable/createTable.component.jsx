@@ -26,6 +26,8 @@ class CreateTable extends React.Component {
                                     this.props.addTable(this.props.table);
 
                                     this.props.toggleCreateTablePopUp();
+                                    this.props.table.tableName = "";
+                                    this.props.table.playerCount = "";
                                 }}
                             >
                                 <div className="content-section-ct">
